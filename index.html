@@ -29,7 +29,8 @@
 
             <nav id="nav-principal" aria-label="Navegacao principal">
                 <ul id="ul-cabecalho">
-                    <li><a class="a-cabecalho" href="#cabecalho">Inicio</a></li>
+                    <!-- inicio manda para hero -->
+                    <li><a class="a-cabecalho" href="#hero">Inicio</a></li>
                     <li><a class="a-cabecalho" href="#descobrir">Descobrir ONGs</a></li>
                     <li><a class="a-cabecalho" href="#impacto">Impacto</a></li>
                     <li><a class="a-cabecalho" href="#fale_conosco">Fale Conosco</a></li>
@@ -165,8 +166,8 @@
 
                     <div id="ongs">
                         <a href="#" class="cards">
-                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
-                                alt="Pessoa apoiando uma iniciativa social">
+                            <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Crianças sentadas no chão em sala de aula ouvem professora lendo livro ilustrado, enquanto algumas levantam a mão para participar.">
                             <h3>Educar para Transformar</h3>
                             <p>Reforco escolar, acolhimento e atividades de formacao para criancas e adolescentes.</p>
                             <h4>Educacao • Reforco • Comunidade</h4>
@@ -174,7 +175,7 @@
 
                         <a href="#" class="cards">
                             <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
-                                alt="Voluntarios em acao social">
+                                alt="Voluntarios em ação social">
                             <h3>Rede Cuidar</h3>
                             <p>Apoio a familias em situacao de vulnerabilidade com campanhas e atendimento solidario.</p>
                             <h4>Solidariedade • Doacao • Cuidado</h4>
@@ -363,8 +364,8 @@
                 </div>
             </section>
         </main>
-
-        <footer role="contentinfo">
+        <!-- contentifo removido do footer-->
+        <footer>
             <div id="div-footer">
                 <h2 class="h2-logo">Conecta Itape</h2>
                 <p id="p-local"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Itapetininga - SP</p>
@@ -377,6 +378,19 @@
     <button id="back-to-top" type="button" aria-label="Voltar ao topo">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <!-- Vlibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
 </body>
 
 </html>
