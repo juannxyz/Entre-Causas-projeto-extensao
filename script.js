@@ -5,6 +5,12 @@ const formStatus = document.querySelector("#form-status");
 const submitButton = document.querySelector("#botao-fale_conosco");
 const faqItems = Array.from(document.querySelectorAll(".faq-item"));
 const impactoCarousel = document.querySelector("[data-impacto-carousel]");
+const imagens = document.querySelectorAll(".detalhe-imagem img");
+const carrossel_fotos = document.querySelectorAll(".carrossel-fotos span");
+const container = document.querySelector(".detalhe-imagem");
+
+let index = 0;
+let intervalo;
 
 /* ===== MENU TOGGLE ===== */
 
@@ -198,3 +204,82 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+/* ===== Carrosel Detalhes ===== */
+
+function mostrarImagem(i) {
+
+    imagens.forEach(img => img.classList.remove("ativa"));
+    carrossel_fotos.forEach(dot => dot.classList.remove("ativo"));
+
+    imagens[i].classList.add("ativa");
+    carrossel_fotos[i].classList.add("ativo");
+
+    index = i;
+}
+
+function iniciarAutoPlay() {
+    intervalo = setInterval(() => {
+        let proximo = (index + 1) % imagens.length;
+        mostrarImagem(proximo);
+    }, 3000);
+}
+
+function pararAutoPlay() {
+    clearInterval(intervalo);
+}
+
+if (imagens.length > 0 && container && carrossel_fotos.length > 0) {
+
+    carrossel_fotos.forEach((fotos, i) => {
+        fotos.addEventListener("click", () => {
+            pararAutoPlay();
+            mostrarImagem(i);
+            iniciarAutoPlay();
+        });
+    });
+
+    container.addEventListener("mouseenter", pararAutoPlay);
+    container.addEventListener("mouseleave", iniciarAutoPlay);
+
+    iniciarAutoPlay();
+}
+
+const modal = document.getElementById("modal-redirect");
+const btnContinuar = document.getElementById("btn-continuar");
+
+const btnDoar = document.querySelector(".btn-doar");
+const btnVoluntario = document.querySelector(".btn-voluntario");
+
+let linkDestino = "#";
+
+function abrirModal(link) {
+    if (!modal) return;
+    linkDestino = link;
+    modal.classList.add("ativo");
+}
+
+btnDoar?.addEventListener("click", () => {
+    abrirModal("https://exemplo-doacao.com");
+});
+
+btnVoluntario?.addEventListener("click", () => {
+    abrirModal("https://exemplo-voluntario.com");
+});
+
+btnContinuar?.addEventListener("click", () => {
+    window.open(linkDestino, "_blank");
+    modal.classList.remove("ativo");
+});
+
+modal?.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("ativo");
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        modal?.classList.remove("ativo");
+    }
+});
