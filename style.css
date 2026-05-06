@@ -877,6 +877,7 @@ footer {
     padding: 10px 20px;
     border-radius: 999px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-doar {
@@ -886,6 +887,7 @@ footer {
     padding: 14px;
     border-radius: 999px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn-voluntario {
@@ -895,6 +897,7 @@ footer {
     padding: 14px;
     border-radius: 999px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .modal { 
