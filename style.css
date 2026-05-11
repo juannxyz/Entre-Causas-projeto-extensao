@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Waffle Soft";
     src: url("./font/Waffle Soft/MADE Waffle Soft PERSONAL USE.otf") format("opentype");
@@ -316,6 +320,13 @@ main {
     border-radius: 0;
     display: grid;
     align-items: center;
+}
+
+#titulo-hero,
+#titulo-descobrir,
+#titulo-impacto,
+#titulo-fale-conosco {
+    scroll-margin-top: clamp(72px, 8vw, 100px);
 }
 
 #descobrir {
