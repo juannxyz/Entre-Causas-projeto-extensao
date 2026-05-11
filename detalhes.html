@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
+    <title>EntreCausas | Educar para Transformar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Conecta Itape</title>
 </head>
 
-<body>
+<body class="page-interna">
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteudo principal</a>
+
     <div id="site">
-        <header id="cabecalho">
-            <a class="h2-logo" href="index.html">Conecta Itape</a>
+        <header id="cabecalho" role="banner">
+            <a class="h2-logo" href="index.html#hero">EntreCausas</a>
 
             <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal"
                 aria-label="Abrir menu de navegacao">
@@ -22,26 +28,30 @@
                 <span></span>
             </button>
 
-            <nav id="nav-principal">
+            <nav id="nav-principal" aria-label="Navegacao principal">
                 <ul id="ul-cabecalho">
-                    <li><a class="a-cabecalho" href="index.html">Inicio</a></li>
+                    <li><a class="a-cabecalho" href="index.html#hero">Inicio</a></li>
                     <li><a class="a-cabecalho" href="index.html#descobrir">Descobrir ONGs</a></li>
                     <li><a class="a-cabecalho" href="index.html#impacto">Impacto</a></li>
                     <li><a class="a-cabecalho" href="index.html#fale_conosco">Fale Conosco</a></li>
                 </ul>
             </nav>
         </header>
+        <div id="nav-hover-zone" aria-hidden="true"></div>
 
-        <main>
-            <section id="detalhe-ong">
+        <main id="conteudo-principal">
+            <section id="detalhe-ong" aria-labelledby="titulo-ong">
                 <div class="detalhe-container">
-
                     <div class="detalhe-imagem">
-                        <img class="ativa" src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Crianças sentadas no chão em sala de aula ouvem professora lendo livro ilustrado, enquanto algumas levantam a mão para participar.">
-                        <img src="img/imagens_exemplo/educacao/criancas_aprendendo.jpg" alt="Crianças sentadas em sala de aula, enquanto fazem atividades com a professora ao lado ajudando as crianças.">
-                        <img src="img/imagens_exemplo/educacao/criancas_na_sala_de_aula.jpg" alt="Crianças sentadas em sala de aula, enquanto fazem atividades.">
+                        <img class="ativa"
+                            src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Criancas em atividade coletiva com educadores em sala de aula.">
+                        <img src="img/imagens_exemplo/educacao/criancas_aprendendo.jpg"
+                            alt="Criancas estudando com acompanhamento de professora em sala.">
+                        <img src="img/imagens_exemplo/educacao/criancas_na_sala_de_aula.jpg"
+                            alt="Criancas em sala de aula participando de atividade educativa.">
 
-                        <div class="carrossel-fotos">
+                        <div class="carrossel-fotos" aria-label="Galeria de fotos da ONG">
                             <span class="ativo"></span>
                             <span></span>
                             <span></span>
@@ -49,8 +59,7 @@
                     </div>
 
                     <div class="detalhe-card">
-
-                        <h2>Educar para Transformar</h2>
+                        <h2 id="titulo-ong">Educar para Transformar</h2>
 
                         <p class="local">
                             <i class="fa-solid fa-location-dot"></i> Itapetininga
@@ -62,60 +71,65 @@
 
                         <div class="mapa">
                             <iframe src="https://www.google.com/maps?q=Itapetininga&output=embed" width="100%"
-                                height="140" style="border:0; border-radius: 15px;">
+                                height="140" style="border:0; border-radius: 15px;"
+                                title="Mapa da localizacao da ONG em Itapetininga">
                             </iframe>
                             <button class="btn-mapa">Ver Mapa</button>
                         </div>
 
                         <button class="btn-doar">
-                            <i class="fa-solid fa-dollar-sign"></i> Doação
+                            <i class="fa-solid fa-dollar-sign"></i> Doacao
                         </button>
 
                         <button class="btn-voluntario">
                             <i class="fa-solid fa-user"></i> Voluntariar-se
                         </button>
-
                     </div>
-
                 </div>
             </section>
         </main>
 
         <footer>
             <div id="div-footer">
-                <h2 class="h2-logo">Conecta Itape</h2>
+                <h2 class="h2-logo">EntreCausas</h2>
                 <p id="p-local"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Itapetininga - SP</p>
             </div>
             <hr id="hr-footer">
-            <p id="p-footer">© 2026 IFSP Campus Itapetininga • Todos os direitos reservados</p>
+            <p id="p-footer">(c) 2026 IFSP Campus Itapetininga - Todos os direitos reservados</p>
         </footer>
     </div>
+
     <div id="modal-redirect" class="modal">
         <div class="modal-box">
             <div class="modal-icon">
                 <i class="fa-solid fa-shield-halved"></i>
             </div>
 
-            <h2>Redirecionando você com segurança</h2>
+            <h2>Redirecionando voce com seguranca</h2>
 
             <p>
-                Você está sendo direcionado para o site oficial da organização responsável por esta ação.
-                A partir daqui, o processo de doação ou voluntariado será realizado diretamente com eles.
+                Voce esta sendo direcionado para o site oficial da organizacao responsavel por esta acao.
+                A partir daqui, o processo de doacao ou voluntariado sera realizado diretamente com eles.
             </p>
 
             <button id="btn-continuar">Continuar para site externo</button>
         </div>
     </div>
+
+    <button id="back-to-top" type="button" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
