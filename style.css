@@ -1017,7 +1017,7 @@ footer {
 
 .social-actions {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px;
 }
 
@@ -1056,9 +1056,13 @@ footer {
     background: transparent;
     border: 1px solid #1b5e20;
     color: #1b5e20;
+    grid-column: 1/3;
 
-    grid-column: 1 / 3;
 }
+.btn-instagram.sozinho,
+.btn-facebook.sozinho {
+    grid-column: 1 / 3;
+}   
 
 .modal {
     position: fixed;
@@ -1082,9 +1086,10 @@ footer {
     background: #e7e2b8;
     padding: 25px;
     border-radius: 20px;
-    max-width: 320px;
+    max-width: 420px;
     text-align: center;
     color: #1b5e20;
+    word-break: break-word; 
 }
 
 .modal-icon {
@@ -1093,13 +1098,14 @@ footer {
 }
 
 .modal-box h2 {
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(1.8rem, 4vw, 1.4rem);
     margin-bottom: 10px;
 }
 
 .modal-box p {
     font-size: 0.9rem;
     margin-bottom: 20px;
+    
 }
 
 #btn-continuar {

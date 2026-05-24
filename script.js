@@ -350,8 +350,6 @@ function pararAutoPlay() {
 const modal = document.getElementById("modal-redirect");
 const btnContinuar = document.getElementById("btn-continuar");
 
-const btnDoar = document.querySelector(".btn-doar");
-const btnVoluntario = document.querySelector(".btn-voluntario");
 
 let linkDestino = "#";
 
@@ -360,14 +358,6 @@ function abrirModal(link) {
     linkDestino = link;
     modal.classList.add("ativo");
 }
-
-btnDoar?.addEventListener("click", () => {
-    abrirModal("https://exemplo-doacao.com");
-});
-
-btnVoluntario?.addEventListener("click", () => {
-    abrirModal("https://exemplo-voluntario.com");
-});
 
 btnContinuar?.addEventListener("click", () => {
     window.open(linkDestino, "_blank");
@@ -475,7 +465,7 @@ const lista_ongs = [
         categoriaPrincipal: "MeioAmbiente",
         categorias: ["Meio Ambiente", "Sustentabilidade", "Reciclagem"],
         local: "Itapetininga",
-        instagram: "https://instagram.com/",
+        instagram: "",
         facebook: "https://facebook.com/",
         mapa:"https://www.google.com/maps?q=Itapetininga&output=embed",
         linkVoluntario:"https://exemplo-voluntario.com",
@@ -522,8 +512,55 @@ if (detalheContainer) {
         document.querySelector("#titulo-ong").textContent = ong.nome;
         document.querySelector(".local").innerHTML = `<i class="fa-solid fa-location-dot"></i>${ong.local}`;
         document.querySelector(".descricao").textContent = ong.descricaoCompleta || ong.descricao;
-        document.querySelector(".btn-instagram").href = ong.instagram;
-        document.querySelector(".btn-facebook").href = ong.facebook;
+        const socialActions = document.querySelector("#social-actions");
+        socialActions.innerHTML = "";
+
+
+        if (ong.instagram) {
+            const btnInstagram = document.createElement("button");
+            btnInstagram.classList.add("btn-instagram");
+            btnInstagram.innerHTML = `
+                <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
+                    <path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"/>
+                    <path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"/>
+                    <path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"/>
+                </svg>
+                Instagram
+            `;
+            btnInstagram.addEventListener("click", () => abrirModal(ong.instagram));
+            socialActions.appendChild(btnInstagram);
+        }
+
+        if (ong.facebook) {
+            const btnFacebook = document.createElement("button");
+            btnFacebook.classList.add("btn-facebook");
+            btnFacebook.innerHTML = `
+                <svg fill="#ffffff" height="25px" width="25px" viewBox="-143 145 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M169.5,357.6l-2.9,38.3h-39.3v133H77.7v-133H51.2v-38.3h26.5v-25.7c0-11.3,0.3-28.8,8.5-39.7c8.7-11.5,20.6-19.3,41.1-19.3c33.4,0,47.4,4.8,47.4,4.8l-6.6,39.2c0,0-11-3.2-21.3-3.2c-10.3,0-19.5,3.7-19.5,14v29.9H169.5z"/>
+                </svg>
+                Facebook
+            `;
+            btnFacebook.addEventListener("click", () => abrirModal(ong.facebook));
+            socialActions.appendChild(btnFacebook);
+        }
+
+        if (ong.linkVoluntario) {
+            const btnVoluntario = document.createElement("button");
+            btnVoluntario.classList.add("btn-voluntario");
+            btnVoluntario.innerHTML = `<i class="fa-solid fa-user"></i> Voluntariar-se`;
+            btnVoluntario.addEventListener("click", () => abrirModal(ong.linkVoluntario));
+            socialActions.appendChild(btnVoluntario);
+        }
+        const temInstagram = !!ong.instagram;
+        const temFacebook = !!ong.facebook;
+
+        if (temInstagram && !temFacebook) {
+            socialActions.querySelector(".btn-instagram").classList.add("sozinho");
+        }
+
+        if (temFacebook && !temInstagram) {
+            socialActions.querySelector(".btn-facebook").classList.add("sozinho");
+        }
         const iframe = document.querySelector(".mapa iframe");
         iframe.src = ong.mapa;
         const detalheImagem = document.querySelector(".detalhe-imagem");
@@ -556,11 +593,11 @@ if (detalheContainer) {
 
 function iniciarCarrosselDetalhes() {
 
-    const imagens = document.querySelectorAll(".detalhe-imagem img");
+    imagens = document.querySelectorAll(".detalhe-imagem img");
 
-    const carrossel_fotos = document.querySelectorAll(".carrossel-fotos span");
+    carrossel_fotos = document.querySelectorAll(".carrossel-fotos span");
 
-    const container = document.querySelector(".detalhe-imagem");
+    container = document.querySelector(".detalhe-imagem");
     if (
         imagens.length > 0 &&
         container &&
