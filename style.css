@@ -330,7 +330,9 @@ main {
 #mais-visibilidade,
 #titulo-mais-visibilidade,
 #encontrar-causas,
-#titulo-encontrar-causas {
+#titulo-encontrar-causas,
+#mais-voluntarios,
+#titulo-mais-voluntarios {
     scroll-margin-top: clamp(72px, 8vw, 100px);
 }
 
@@ -2119,7 +2121,7 @@ footer {
 }
 
 .impacto-benefit-card h2 {
-    color: #122a16;
+    color: #0f5212;
     font-family: "Montserrat", Arial, sans-serif;
     font-size: clamp(1.25rem, 2vw, 1.7rem);
     font-weight: 800;
@@ -2365,6 +2367,201 @@ footer {
     color: #fdfbd4;
 }
 
+.impacto-volunteer-section {
+    background: #fdfbd4;
+    color: #0f5212;
+}
+
+.impacto-volunteer-inner {
+    width: min(1360px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0 72px;
+    display: grid;
+    gap: 28px;
+}
+
+.impacto-volunteer-copy {
+    display: grid;
+    gap: 18px;
+}
+
+.impacto-volunteer-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(0.92rem, 1.15vw, 1.04rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.impacto-volunteer-eyebrow i {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid #0f5212;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.impacto-volunteer-copy h2 {
+    max-width: 10ch;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(2.4rem, 6vw, 5.1rem);
+    font-weight: 900;
+    line-height: 0.94;
+}
+
+.impacto-volunteer-lead {
+    width: 100%;
+    max-width: none;
+    color: rgba(15, 82, 18, 0.72);
+    font-size: clamp(1.1rem, 2vw, 1.34rem);
+    line-height: 1.55;
+}
+
+.impacto-volunteer-points {
+    display: grid;
+    gap: 18px;
+}
+
+.impacto-volunteer-point {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.impacto-volunteer-point-icon {
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border: 2px solid rgba(33, 118, 1, 0.16);
+    border-radius: 50%;
+    background: transparent;
+    color: #217601;
+    font-size: 1.75rem;
+}
+
+.impacto-volunteer-point h3 {
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1.3rem, 2.1vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.impacto-volunteer-point p {
+    margin-top: 6px;
+    color: rgba(15, 82, 18, 0.82);
+    font-size: clamp(1rem, 1.45vw, 1.12rem);
+    line-height: 1.55;
+}
+
+.impacto-volunteer-actions {
+    display: grid;
+    gap: 16px;
+}
+
+.impacto-volunteer-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+    min-height: 72px;
+    padding: 0 26px;
+    border: 2px solid #217601;
+    border-radius: 18px;
+    background: #217601;
+    color: #fdfbd4;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.impacto-volunteer-cta:hover,
+.impacto-volunteer-cta:focus-visible {
+    background: #0f5212;
+    border-color: #0f5212;
+    color: #fdfbd4;
+}
+
+.impacto-volunteer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    color: #217601;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.14rem);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.impacto-volunteer-link:hover,
+.impacto-volunteer-link:focus-visible {
+    color: #0f5212;
+}
+
+.impacto-volunteer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.impacto-volunteer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 28px 22px 26px;
+    border: 2px solid rgba(33, 118, 1, 0.18);
+    border-radius: 24px;
+    background: #fdfbd4;
+    text-align: center;
+}
+
+.impacto-volunteer-card-icon {
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px;
+    border: 2px solid rgba(33, 118, 1, 0.12);
+    border-radius: 50%;
+    background: transparent;
+    color: #0f5212;
+    font-size: 2.2rem;
+}
+
+.impacto-volunteer-card h3 {
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1.5rem, 2.2vw, 2.05rem);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.impacto-volunteer-card p {
+    margin-top: 16px;
+    color: rgba(18, 42, 22, 0.82);
+    font-size: clamp(1rem, 1.35vw, 1.12rem);
+    line-height: 1.62;
+}
+
 .page-impacto footer {
     background: #217601;
     color: #ffffff;
@@ -2430,6 +2627,17 @@ footer {
     .impacto-discovery-media img {
         aspect-ratio: 5 / 4;
     }
+
+    .impacto-volunteer-inner {
+        width: min(1360px, calc(100% - 56px));
+        padding: 36px 0 72px;
+        gap: 34px;
+    }
+
+    .impacto-volunteer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -2471,6 +2679,24 @@ footer {
 
     .impacto-discovery-media img {
         aspect-ratio: 5 / 6;
+    }
+
+    .impacto-volunteer-inner {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        padding: 40px 0 84px;
+        gap: 46px;
+        align-items: start;
+    }
+
+    .impacto-volunteer-copy {
+        gap: 22px;
+        position: sticky;
+        top: 120px;
+    }
+
+    .impacto-volunteer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
     }
 }
 
