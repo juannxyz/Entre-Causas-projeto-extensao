@@ -1,4 +1,4 @@
-html {
+﻿html {
     scroll-behavior: smooth;
 }
 
@@ -469,7 +469,7 @@ main {
 }
 
 .impacto-header {
-    /* add margin-top para melhorar a visualização quando clicado no nav */
+    /* add margin-top para melhorar a visualizaÃ§Ã£o quando clicado no nav */
     margin-top: 18px;
     margin-bottom: 18px;
     text-align: center;
@@ -1728,6 +1728,10 @@ footer {
 
 @media (max-width: 767px) {
 
+    body:not(.page-impacto):not(.page-interna) #cabecalho {
+        position: absolute;
+    }
+
     .hero-controls {
         gap: 0;
         padding: 0;
@@ -1783,7 +1787,7 @@ footer {
         margin-top: auto;
     }
 
-    /* diminui o tamanho do carrosel não cabia na tela inteira */
+    /* diminui o tamanho do carrosel nÃ£o cabia na tela inteira */
     .impacto-stage {
         max-height: 800px;
     }
@@ -2708,6 +2712,12 @@ footer {
     color: #ffffff;
 }
 
+.page-impacto footer .h2-logo,
+.page-impacto footer #p-local,
+.page-impacto footer #p-footer {
+    color: #ffffff;
+}
+
 @media (min-width: 768px) {
     .page-impacto #nav-principal {
         position: static;
@@ -2936,3 +2946,4 @@ footer {
         transition: none;
     }
 }
+
