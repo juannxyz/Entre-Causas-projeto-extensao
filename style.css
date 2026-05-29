@@ -332,7 +332,9 @@ main {
 #encontrar-causas,
 #titulo-encontrar-causas,
 #mais-voluntarios,
-#titulo-mais-voluntarios {
+#titulo-mais-voluntarios,
+#imagem-fortalecida,
+#titulo-imagem-fortalecida {
     scroll-margin-top: clamp(72px, 8vw, 100px);
 }
 
@@ -2562,6 +2564,145 @@ footer {
     line-height: 1.62;
 }
 
+.impacto-image-section {
+    background: #fdfbd4;
+    color: #0f5212;
+}
+
+.impacto-image-inner {
+    width: min(1360px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0 84px;
+    display: grid;
+    gap: 28px;
+}
+
+.impacto-image-header {
+    display: grid;
+    justify-items: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.impacto-image-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding: 0;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(0.92rem, 1.15vw, 1.04rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.impacto-image-eyebrow i {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #0f5212;
+    border-radius: 50%;
+    color: #217601;
+    font-size: 1.3rem;
+}
+
+.impacto-image-header h2 {
+    max-width: 11ch;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(2.35rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 0.94;
+    text-wrap: balance;
+}
+
+.impacto-image-lead {
+    max-width: 760px;
+    color: rgba(15, 82, 18, 0.74);
+    font-size: clamp(1rem, 1.85vw, 1.22rem);
+    line-height: 1.62;
+}
+
+.impacto-image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.impacto-image-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 2px solid rgba(33, 118, 1, 0.18);
+    border-radius: 28px;
+    background: #fdfbd4;
+    overflow: hidden;
+}
+
+.impacto-image-card-media {
+    position: relative;
+    min-height: 220px;
+    background: #ece3bf;
+}
+
+.impacto-image-card-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.impacto-image-card-copy {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    padding: 50px 22px 26px;
+    background: #fdfbd4;
+}
+
+.impacto-image-card-icon {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    border: 4px solid #fdfbd4;
+    border-radius: 50%;
+    background: #217601;
+    color: #fdfbd4;
+    font-size: 2rem;
+}
+
+.impacto-image-card h3 {
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.impacto-image-card p {
+    color: rgba(18, 42, 22, 0.84);
+    font-size: clamp(1rem, 1.45vw, 1.1rem);
+    line-height: 1.62;
+}
+
+.impacto-image-card p::after {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 4px;
+    margin-top: 20px;
+    border-radius: 999px;
+    background: #217601;
+}
+
 .page-impacto footer {
     background: #217601;
     color: #ffffff;
@@ -2634,9 +2775,20 @@ footer {
         gap: 34px;
     }
 
+    .impacto-image-inner {
+        width: min(1360px, calc(100% - 56px));
+        padding: 36px 0 84px;
+        gap: 34px;
+    }
+
     .impacto-volunteer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 22px;
+    }
+
+    .impacto-image-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
     }
 }
 
@@ -2697,6 +2849,20 @@ footer {
     .impacto-volunteer-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
+    }
+
+    .impacto-image-inner {
+        padding: 40px 0 92px;
+        gap: 38px;
+    }
+
+    .impacto-image-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .impacto-image-card-copy {
+        padding: 54px 24px 28px;
     }
 }
 
