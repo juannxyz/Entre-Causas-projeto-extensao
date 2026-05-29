@@ -328,7 +328,9 @@ main {
 #titulo-fale-conosco,
 #titulo-impacto-pagina,
 #mais-visibilidade,
-#titulo-mais-visibilidade {
+#titulo-mais-visibilidade,
+#encontrar-causas,
+#titulo-encontrar-causas {
     scroll-margin-top: clamp(72px, 8vw, 100px);
 }
 
@@ -1047,7 +1049,7 @@ footer {
 }
 
 .btn-facebook {
-    background:#3b5998;   
+    background: #3b5998;
     color: white;
     border: none;
 }
@@ -1059,10 +1061,11 @@ footer {
     grid-column: 1/3;
 
 }
+
 .btn-instagram.sozinho,
 .btn-facebook.sozinho {
     grid-column: 1 / 3;
-}   
+}
 
 .modal {
     position: fixed;
@@ -1089,7 +1092,7 @@ footer {
     max-width: 420px;
     text-align: center;
     color: #1b5e20;
-    word-break: break-word; 
+    word-break: break-word;
 }
 
 .modal-icon {
@@ -1105,7 +1108,7 @@ footer {
 .modal-box p {
     font-size: 0.9rem;
     margin-bottom: 20px;
-    
+
 }
 
 #btn-continuar {
@@ -1800,12 +1803,12 @@ footer {
     align-items: stretch;
 }
 
-#impacto + #fale_conosco {
+#impacto+#fale_conosco {
     margin-top: 0;
     padding-top: 0;
 }
 
-#impacto + #fale_conosco .section-inner.section-inner--wide {
+#impacto+#fale_conosco .section-inner.section-inner--wide {
     padding-top: clamp(2rem, 4vw, 3.125rem);
 }
 
@@ -2004,6 +2007,12 @@ footer {
     min-height: 100svh;
     overflow: visible;
     background: #fdfbd4;
+}
+
+@media (max-width: 767px) {
+    .page-impacto #cabecalho {
+        position: absolute;
+    }
 }
 
 .impacto-pagina-hero {
@@ -2254,6 +2263,108 @@ footer {
     line-height: 1.68;
 }
 
+.impacto-discovery-section {
+    background: #fdfbd4;
+    color: #0f5212;
+}
+
+.impacto-discovery-inner {
+    width: min(1360px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 24px 0 64px;
+    display: grid;
+    gap: 26px;
+    align-items: center;
+}
+
+.impacto-discovery-media {
+    overflow: hidden;
+    border: 2px solid rgba(33, 118, 1, 0.72);
+    border-radius: 28px;
+    background: #fdfbd4;
+}
+
+.impacto-discovery-media img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+.impacto-discovery-copy {
+    display: grid;
+    gap: 18px;
+    width: 100%;
+}
+
+.impacto-discovery-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.impacto-discovery-eyebrow i {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border: 2px solid #0f5212;
+    border-radius: 50%;
+    color: #217601;
+    font-size: 1.45rem;
+}
+
+.impacto-discovery-copy h2 {
+    width: 100%;
+    max-width: none;
+    color: #0f5212;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(2.2rem, 5.4vw, 4.8rem);
+    font-weight: 900;
+    line-height: 0.95;
+}
+
+.impacto-discovery-text {
+    width: 100%;
+    max-width: none;
+    color: rgba(15, 82, 18, 0.72);
+    font-size: clamp(1rem, 1.8vw, 1.24rem);
+    line-height: 1.6;
+}
+
+.impacto-discovery-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    width: 100%;
+    max-width: none;
+    min-height: 74px;
+    padding: 0 28px;
+    border: 2px solid #217601;
+    border-radius: 18px;
+    background: #217601;
+    color: #fdfbd4;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.impacto-discovery-cta:hover,
+.impacto-discovery-cta:focus-visible {
+    background: #0f5212;
+    border-color: #0f5212;
+    color: #fdfbd4;
+}
+
 .page-impacto footer {
     background: #217601;
     color: #ffffff;
@@ -2309,6 +2420,16 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 22px;
     }
+
+    .impacto-discovery-inner {
+        width: min(1360px, calc(100% - 56px));
+        padding: 36px 0 72px;
+        gap: 34px;
+    }
+
+    .impacto-discovery-media img {
+        aspect-ratio: 5 / 4;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -2335,6 +2456,21 @@ footer {
     .impacto-detail-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
+    }
+
+    .impacto-discovery-inner {
+        grid-template-columns: minmax(420px, 0.96fr) minmax(0, 1.04fr);
+        padding: 40px 0 84px;
+        gap: 48px;
+    }
+
+    .impacto-discovery-copy {
+        gap: 22px;
+        align-content: center;
+    }
+
+    .impacto-discovery-media img {
+        aspect-ratio: 5 / 6;
     }
 }
 
