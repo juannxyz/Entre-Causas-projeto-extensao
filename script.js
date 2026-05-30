@@ -402,45 +402,44 @@ const nomesCategorias = {
 const lista_ongs = [
     {
         id: 1,
-        nome: "Educar para Transformar",
-        descricao:"Reforço escolar, acolhimento e atividades de formacao para criancas e adolescentes.",
-        descricaoCompleta:"A ONG atua oferecendo reforco escolar, acolhimento social e oficinas educativas para criancas e adolescentes em situacao de vulnerabilidade.",
-        categoriaPrincipal: "Educacao",
-        categorias: ["Educacao", "Reforco", "Comunidade"],
-        local: "Itapetininga",
-        instagram: "https://instagram.com/",
-        facebook: "https://facebook.com/",
-        mapa:"https://www.google.com/maps?q=Itapetininga&output=embed",
-        linkVoluntario:"https://exemplo-voluntario.com",
+        nome: "Engenheiros sem Fronteiras",
+        descricao: "Transformando conhecimento em impacto social por meio da engenharia, educação e sustentabilidade.",
+        descricaoCompleta: "O Engenheiros sem Fronteiras - Núcleo Itapetininga utiliza conhecimentos da engenharia para promover melhorias para pessoas em situação de vulnerabilidade social, além de desenvolver projetos ambientais e educacionais. Entre as ações realizadas estão palestras em escolas, automação da irrigação da horta comunitária do IFSP e iniciativas de reaproveitamento de recursos hídricos.",
+        categoriaPrincipal: "Educação",
+        categorias: ["Meio Ambiente", "Social"],
+        local: "Instituto Federal de São Paulo - Campus Itapetininga",
+        instagram: "https://instagram.com/esf_itapetininga",
+        facebook: "",
+        mapa: "https://www.google.com/maps?q=IFSP+Campus+Itapetininga&output=embed",
         imagens: [
             {
-                src: "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f",
+                src: "./img/cards/esf_itapetininga/capa.png",
+                alt: "Criancas participando de atividade educativa."
+            },
+
+            {
+                src: "./img/cards/esf_itapetininga/01.png",
                 alt: "Criancas em atividade coletiva com educadores."
             },
 
             {
-                src: "img/imagens_exemplo/educacao/criancas_aprendendo.jpg",
+                src: "./img/cards/esf_itapetininga/02.png",
                 alt: "Criancas estudando com professora."
-            },
-
-            {
-                src: "img/imagens_exemplo/educacao/criancas_na_sala_de_aula.jpg",
-                alt: "Criancas participando de atividade educativa."
             }
         ]
     },
     {
         id: 2,
         nome: "Patinhas do Bem",
-        descricao:"Resgate, cuidado e adoção responsável de animais abandonados.",
-        descricaoCompleta:"A ONG Patinhas do Bem atua no resgate de cães e gatos em situação de abandono, oferecendo cuidados veterinários, alimentação e campanhas de adoção responsável.",
+        descricao: "Resgate, cuidado e adoção responsável de animais abandonados.",
+        descricaoCompleta: "A ONG Patinhas do Bem atua no resgate de cães e gatos em situação de abandono, oferecendo cuidados veterinários, alimentação e campanhas de adoção responsável.",
         categoriaPrincipal: "Animais",
         categorias: ["Animais", "Adoção", "Resgate"],
         local: "Itapetininga",
         instagram: "https://instagram.com/",
         facebook: "https://facebook.com/",
-        mapa:"https://www.google.com/maps?q=Itapetininga&output=embed",
-        linkVoluntario:"https://exemplo-voluntario.com",
+        mapa: "https://www.google.com/maps?q=Itapetininga&output=embed",
+        linkVoluntario: "https://exemplo-voluntario.com",
         imagens: [
             {
                 src: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop",
@@ -460,15 +459,15 @@ const lista_ongs = [
     {
         id: 3,
         nome: "Movimento Verde Vivo",
-        descricao:"Projetos ambientais, reciclagem e ações de conscientização ecológica.",
-        descricaoCompleta:"O Movimento Verde Vivo promove ações de preservação ambiental, plantio de árvores, reciclagem e educação ambiental em comunidades e escolas.",
+        descricao: "Projetos ambientais, reciclagem e ações de conscientização ecológica.",
+        descricaoCompleta: "O Movimento Verde Vivo promove ações de preservação ambiental, plantio de árvores, reciclagem e educação ambiental em comunidades e escolas.",
         categoriaPrincipal: "MeioAmbiente",
         categorias: ["Meio Ambiente", "Sustentabilidade", "Reciclagem"],
         local: "Itapetininga",
         instagram: "",
         facebook: "https://facebook.com/",
-        mapa:"https://www.google.com/maps?q=Itapetininga&output=embed",
-        linkVoluntario:"https://exemplo-voluntario.com",
+        mapa: "https://www.google.com/maps?q=Itapetininga&output=embed",
+        linkVoluntario: "https://exemplo-voluntario.com",
         imagens: [
             {
                 src: "https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1200&auto=format&fit=crop",
@@ -629,7 +628,7 @@ function renderizarONGs(lista) {
         card_ong.href = `detalhes.html?id=${ong.id}`;
         const span_ong = document.createElement("span");
         span_ong.classList.add("card-badge");
-        const icone = iconesCategorias[ong.categoriaPrincipal]|| "fa-solid fa-circle-info";
+        const icone = iconesCategorias[ong.categoriaPrincipal] || "fa-solid fa-circle-info";
         span_ong.innerHTML = `<i class="${icone}"></i>${nomesCategorias[ong.categoriaPrincipal] || ong.categoriaPrincipal}`;
         const img_ong = document.createElement("img");
         img_ong.src = ong.imagens[0].src;
