@@ -2683,6 +2683,10 @@ footer {
     font-size: 2rem;
 }
 
+.impacto-image-card-icon i {
+    color: inherit;
+}
+
 .impacto-image-card h3 {
     color: #0f5212;
     font-family: "Montserrat", Arial, sans-serif;
