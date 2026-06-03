@@ -405,7 +405,7 @@ const lista_ongs = [
         nome: "Engenheiros sem Fronteiras",
         descricao: "Transformando conhecimento em impacto social por meio da engenharia, educação e sustentabilidade.",
         descricaoCompleta: "O Engenheiros sem Fronteiras - Núcleo Itapetininga utiliza conhecimentos da engenharia para promover melhorias para pessoas em situação de vulnerabilidade social, além de desenvolver projetos ambientais e educacionais. Entre as ações realizadas estão palestras em escolas, automação da irrigação da horta comunitária do IFSP e iniciativas de reaproveitamento de recursos hídricos.",
-        categoriaPrincipal: "Educação",
+        categoriaPrincipal: "Educacao",
         categorias: ["Meio Ambiente", "Social"],
         local: "Instituto Federal de São Paulo - Campus Itapetininga",
         instagram: "https://instagram.com/esf_itapetininga",
@@ -659,4 +659,25 @@ inputBusca?.addEventListener("input", () => {
         );
     });
     renderizarONGs(ongsFiltradas);
+});
+
+
+const btnAumentar = document.querySelector("#aumentar-fonte");
+const btnDiminuir = document.querySelector("#diminuir-fonte");
+const btnContraste = document.querySelector("#alto-contraste");
+
+let tamanhoFonte = 100;
+
+btnAumentar.addEventListener("click", () =>{
+    tamanhoFonte += 10;
+    document.documentElement.style.fontSize = tamanhoFonte + "%";
+});
+
+btnDiminuir.addEventListener("click", () =>{
+    tamanhoFonte -= 10;
+    document.documentElement.style.fontSize = tamanhoFonte + "%";
+});
+
+btnContraste.addEventListener("click", () =>{
+    document.body.classList.toggle("alto-contraste");
 });
