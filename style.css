@@ -1444,9 +1444,7 @@ footer {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg,
-            rgba(178, 111, 88, 0.82) 0%,
-            rgba(178, 111, 88, 0.6) 50%,
-            rgba(178, 111, 88, 0.4) 100%);
+            rgba(57, 57, 57, 0.4) 100%);
 }
 
 .hero-content {
@@ -1483,6 +1481,7 @@ footer {
     font-weight: 900;
     line-height: 1.05;
     color: var(--white);
+    text-shadow: none;
     animation: fadeInUp 0.6s 0.15s ease both;
 }
 
@@ -1496,6 +1495,7 @@ footer {
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.85);
     max-width: 520px;
+    text-shadow: none;
     animation: fadeInUp 0.6s 0.3s ease both;
 }
 
@@ -1511,6 +1511,7 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    box-shadow: none;
 }
 
 .hero-actions .btn i {
@@ -1525,6 +1526,7 @@ footer {
 
 .hero-actions .btn:hover,
 .hero-actions .btn:focus-visible {
+    box-shadow: none;
     transform: none;
 }
 
@@ -2950,6 +2952,7 @@ footer {
         transition: none;
     }
 }
+
 .impacto-community-section {
     background: #fdfbd4;
     color: #0f5212;
@@ -3186,6 +3189,7 @@ footer {
     font-size: clamp(1rem, 1.45vw, 1.12rem);
     line-height: 1.55;
 }
+
 .impacto-partners-cta {
     display: inline-flex;
     align-items: center;
@@ -3218,7 +3222,7 @@ footer {
     gap: 18px;
 }
 
-.impacto-partners-card{
+.impacto-partners-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3596,4 +3600,3 @@ footer {
         aspect-ratio: 5 / 6;
     }
 }
-
